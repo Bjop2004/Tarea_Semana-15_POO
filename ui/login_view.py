@@ -16,7 +16,7 @@ class LoginView(tk.Frame):
         self.servicio = servicio
         self.abrir_main = abrir_main
 
-        self.pack()
+        self.pack(expand=True)
 
         tk.Label(
             self,
@@ -42,11 +42,12 @@ class LoginView(tk.Frame):
             self,
             text="Ingresar",
             command=self.ingresar
-        ).pack()
+        ).pack(pady=10)
 
     def ingresar(self):
 
         usuario = self.usuario_entry.get()
+
         password = self.password_entry.get()
 
         if self.servicio.validar_login(

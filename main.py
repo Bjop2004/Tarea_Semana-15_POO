@@ -16,7 +16,7 @@ class App:
         )
 
         self.root.geometry(
-            "700x500"
+            "900x600"
         )
 
         self.servicio = RestauranteServicio()
@@ -30,7 +30,6 @@ class App:
     def limpiar(self):
 
         if self.frame_actual:
-
             self.frame_actual.destroy()
 
     def mostrar_login(self):

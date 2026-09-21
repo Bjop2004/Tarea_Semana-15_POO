@@ -1,7 +1,6 @@
 class Producto:
 
     def __init__(self, codigo, nombre, categoria, precio):
-
         self.codigo = codigo
         self.nombre = nombre
         self.categoria = categoria
@@ -16,6 +15,15 @@ class Producto:
             data["categoria"],
             data["precio"]
         )
+
+    def convertir_a_diccionario(self):
+
+        return {
+            "codigo": self.codigo,
+            "nombre": self.nombre,
+            "categoria": self.categoria,
+            "precio": self.precio
+        }
 
     def __str__(self):
 

@@ -1,47 +1,38 @@
-# Restaurante App - (Semana 13)
+# Restaurante App — Semana 14: Componentes y Contenedores
 
-Este proyecto corresponde a la **Semana 13** de la materia Programación Orientada a Objetos (POO). Representa la primera versión de la interfaz gráfica de usuario (GUI) desarrollada con **Tkinter**, migrando el sistema base del restaurante desde una aplicación de consola a una arquitectura visual modular.
-
-En esta fase inicial, la aplicación se enfoca únicamente en la gestión e interacción de información base: **usuarios** y **productos**.
+Aplicación de escritorio para la gestión de un restaurante desarrollada en Python con Tkinter. En esta versión de la **Semana 14**, el proyecto evoluciona hacia una experiencia de usuario más organizada, amigable y modular mediante la implementación formal de **componentes, contenedores (frames) y gestores de geometría**, manteniendo la arquitectura en capas y la persistencia en archivos JSON.
 
 ---
 
-## 📌 Alcance de la Versión (Semana 13)
+## 📌 Propósito de la Semana 14
 
-### ✅ Funcionalidades Incluidas
-* **Autenticación (Login):** Validación de credenciales de usuario contra un archivo persistente `.json`.
-* **Vista Principal (MainView):** Carga y visualización dinámica de las listas de productos y usuarios.
-* **Persistencia de Datos:** Lectura e hidratación de objetos desde archivos JSON (`productos.json` y `usuarios.json`).
-* **Navegación de Ventana Única:** Cambio fluido entre la vista de Login y la vista Principal destruyendo y redibujando marcos (`tk.Frame`) dentro de una sola ventana contenedora.
-* **Cierre de Sesión:** Opción para finalizar la sesión actual y regresar a la pantalla de Login.
+El objetivo principal de esta entrega es refactorizar y mejorar la capa de interfaz de usuario (`ui`) aplicando principios de diseño de interfaces gráficas (GUI):
+* **Jerarquía visual sólida:** Uso de contenedores (`tk.Frame`, `ttk.LabelFrame`) para separar la navegación, los formularios de captura y los paneles de visualización.
+* **Separación de responsabilidades:** Mantener la lógica de negocio y validaciones estrictamente dentro de los servicios (`RestauranteServicio`) y la persistencia en archivos JSON (`ArchivoServicio`), evitando colocar lógica dentro de la vista.
+* **Operaciones CRUD sobre Productos:** Permitir el registro, consulta/carga, actualización y eliminación de productos desde la GUI mediante controles interactivos y acciones de botones (`command=`).
 
 ---
 
-## 📂 Estructura del Proyecto
+## 📁 Estructura del Proyecto
 
-El proyecto aplica una arquitectura en capas separando la presentación (UI), la lógica de negocio (servicios) y las entidades (modelos):
+El repositorio mantiene la arquitectura de software en capas estructurada de la siguiente manera:
 
 ```text
 restaurante_app/
-│
 ├── datos/
-│   ├── productos.json       # Persistencia de datos de productos
-│   └── usuarios.json        # Persistencia de datos de usuarios
-│
+│   ├── productos.json          # Persistencia de productos
+│   └── usuarios.json           # Persistencia de usuarios
 ├── modelos/
 │   ├── __init__.py
-│   ├── producto.py          # Clase entidad Producto
-│   └── usuario.py           # Clase entidad Usuario
-│
+│   ├── producto.py             # Modelo de entidad Producto
+│   └── usuario.py              # Modelo de entidad Usuario
 ├── servicios/
 │   ├── __init__.py
-│   ├── archivo_servicio.py  # Servicio genérico de lectura JSON
-│   └── restaurante_servicio.py # Lógica de negocio y manejo de listas
-│
+│   ├── archivo_servicio.py     # Manejo genérico de lectura/escritura JSON
+│   └── restaurante_servicio.py # Lógica de negocio y validaciones
 ├── ui/
 │   ├── __init__.py
-│   ├── login_view.py        # Interfaz del formulario de autenticación
-│   └── main_view.py         # Interfaz principal con listas de datos
-│
-├── main.py                  # Punto de entrada de la aplicación
-└── README.md                # Documentación del proyecto
+│   ├── login_view.py           # Vista de inicio de sesión
+│   └── main_view.py            # Vista principal (Contenedores y Componentes)
+├── main.py                     # Punto de entrada de la aplicación
+└── README.md                   # Documentación del proyecto
