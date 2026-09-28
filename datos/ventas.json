@@ -1,0 +1,20 @@
+[
+    {
+        "id_venta": "V-0001",
+        "usuario": "admin",
+        "producto_codigo": "P001",
+        "fecha": "2026-09-27 10:00:00"
+    },
+    {
+        "id_venta": "V-0002",
+        "usuario": "admin",
+        "producto_codigo": "P001",
+        "fecha": "2026-09-27 22:12:00"
+    },
+    {
+        "id_venta": "V-0003",
+        "usuario": "admin",
+        "producto_codigo": "P003",
+        "fecha": "2026-09-27 22:12:52"
+    }
+]

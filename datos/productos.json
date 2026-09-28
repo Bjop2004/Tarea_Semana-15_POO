@@ -10,5 +10,11 @@
         "nombre": "Coca Cola",
         "categoria": "Bebida",
         "precio": 1.5
+    },
+    {
+        "codigo": "P003",
+        "nombre": "Papi Pollo ",
+        "categoria": "Comida",
+        "precio": 2.5
     }
 ]
