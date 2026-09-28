@@ -44,10 +44,10 @@ restaurante_app/
 ├── main.py                     # Punto de entrada de la aplicación
 └── README.md                   # Documentación técnica
 
-## 🚀 Instrucciones de Ejecución
+🚀 Instrucciones de Ejecución
 
-### **Requisitos Previos**
-1. Tener instalado **Python 3.10+**.
-2. Instalar la librería externa **Pillow** (utilizada para la carga, redimensionamiento y visualización adecuada de los recursos gráficos `.png` de la carpeta `assets/` dentro de la interfaz gráfica de Tkinter):
+Requisitos Previos
+1. Tener instalado Python 3.10+.
+2. Instalar la librería externa Pillow (utilizada para la carga, redimensionamiento y visualización adecuada de los recursos gráficos `.png` de la carpeta `assets/` dentro de la interfaz gráfica de Tkinter):
    ```bash
    pip install pillow
